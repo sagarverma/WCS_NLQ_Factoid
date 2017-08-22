@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="KGCreationService">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="wcs-online-KG-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wcs-online-KG/wcs-online-KG">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wcs-gremlin-translator-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wcs-gremlin-translator/wcs-gremlin-translator">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wcs-OQLInterface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wcs-OQLInterface/wcs-OQLInterface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wcs-ontology-datatypes-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Ontology-DataTypes/Ontology-DataTypes">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wcs-oql-compiler-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wcs-oql-compiler/wcs-oql-compiler">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="KGCreationService"/>
+        <property name="java-output-path" value="/KGCreationService/build/classes"/>
+    </wb-module>
+</project-modules>

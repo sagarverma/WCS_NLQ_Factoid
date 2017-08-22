@@ -1,0 +1,6 @@
+KGCreationService/target/*
+wcs-gremlin-translator/target/*
+wcs-oql-compiler/target/*
+Ontology-DataTypes/target/*
+wcs-online-KG/target/*
+wcs-OQLInterface/target/*

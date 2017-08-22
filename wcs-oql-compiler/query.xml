@@ -1,0 +1,236 @@
+<com.ibm.tatzia.kg.query.OQLQuery>
+  <select>
+    <selectColumns>
+      <com.ibm.tatzia.kg.query.SelectColumn>
+        <__value class="com.ibm.tatzia.kg.query.FunctionCall">
+          <__functionName>SUM</__functionName>
+          <__hasDistinct>true</__hasDistinct>
+          <__params>
+            <com.ibm.tatzia.kg.query.OQLIdentifier>
+              <aliasref>
+                <alias>
+                  <o>
+                    <name>PublicMetricData</name>
+                  </o>
+                  <id>0</id>
+                  <name>oPublicMetricData</name>
+                </alias>
+                <name>oPublicMetricData</name>
+              </aliasref>
+              <property>
+                <aliasref reference="../../aliasref"/>
+                <name>metric_value</name>
+              </property>
+            </com.ibm.tatzia.kg.query.OQLIdentifier>
+          </__params>
+        </__value>
+      </com.ibm.tatzia.kg.query.SelectColumn>
+      <com.ibm.tatzia.kg.query.SelectColumn>
+        <__value class="com.ibm.tatzia.kg.query.OQLIdentifier">
+          <aliasref>
+            <alias reference="../../../../com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+            <name>oPublicMetricData</name>
+          </aliasref>
+          <property>
+            <aliasref reference="../../aliasref"/>
+            <name>metric_year</name>
+          </property>
+        </__value>
+      </com.ibm.tatzia.kg.query.SelectColumn>
+    </selectColumns>
+    <hasDistinct>false</hasDistinct>
+  </select>
+  <from>
+    <fromClause>
+      <com.ibm.tatzia.kg.query.FromArgument>
+        <concept reference="../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias/o"/>
+        <alias reference="../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+        <isIntermediate>false</isIntermediate>
+      </com.ibm.tatzia.kg.query.FromArgument>
+      <com.ibm.tatzia.kg.query.FromArgument>
+        <concept>
+          <name>PublicMetric</name>
+        </concept>
+        <alias>
+          <o reference="../../concept"/>
+          <id>1</id>
+          <name>oPublicMetric</name>
+        </alias>
+        <isIntermediate>false</isIntermediate>
+      </com.ibm.tatzia.kg.query.FromArgument>
+      <com.ibm.tatzia.kg.query.FromArgument>
+        <concept>
+          <name>PublicCompany</name>
+        </concept>
+        <alias>
+          <o reference="../../concept"/>
+          <id>2</id>
+          <name>oPublicCompany</name>
+        </alias>
+        <isIntermediate>false</isIntermediate>
+      </com.ibm.tatzia.kg.query.FromArgument>
+    </fromClause>
+  </from>
+  <whereClause>
+    <expr class="com.ibm.tatzia.kg.query.AndExpression">
+      <Exprs>
+        <com.ibm.tatzia.kg.query.CompExpr>
+          <leftExpr class="com.ibm.tatzia.kg.query.OQLIdentifier">
+            <aliasref>
+              <alias reference="../../../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+              <name>oPublicMetricData</name>
+            </aliasref>
+            <property>
+              <aliasref reference="../../aliasref"/>
+              <name>metric_kind</name>
+            </property>
+          </leftExpr>
+          <op>Equal</op>
+          <rightExpr class="com.ibm.tatzia.kg.query.ConstantVal">
+            <__value>&apos;yearly&apos;</__value>
+            <type>STRING</type>
+          </rightExpr>
+        </com.ibm.tatzia.kg.query.CompExpr>
+        <com.ibm.tatzia.kg.query.CompExpr>
+          <leftExpr class="com.ibm.tatzia.kg.query.OQLIdentifier">
+            <aliasref>
+              <alias reference="../../../../../../../from/fromClause/com.ibm.tatzia.kg.query.FromArgument[2]/alias"/>
+              <name>oPublicMetric</name>
+            </aliasref>
+            <property>
+              <aliasref reference="../../aliasref"/>
+              <name>metric_name</name>
+            </property>
+          </leftExpr>
+          <op>Equal</op>
+          <rightExpr class="com.ibm.tatzia.kg.query.ConstantVal">
+            <__value>&apos;Revenues&apos;</__value>
+            <type>STRING</type>
+          </rightExpr>
+        </com.ibm.tatzia.kg.query.CompExpr>
+        <com.ibm.tatzia.kg.query.CompExpr>
+          <leftExpr class="com.ibm.tatzia.kg.query.OQLIdentifier">
+            <aliasref>
+              <alias reference="../../../../../../../from/fromClause/com.ibm.tatzia.kg.query.FromArgument[3]/alias"/>
+              <name>oPublicCompany</name>
+            </aliasref>
+            <property>
+              <aliasref reference="../../aliasref"/>
+              <name>name</name>
+            </property>
+          </leftExpr>
+          <op>In</op>
+          <rightExpr class="com.ibm.tatzia.kg.query.ListExpression">
+            <__elements>
+              <com.ibm.tatzia.kg.query.ConstantVal>
+                <__value>&apos;IBM Retirement Fund&apos;</__value>
+                <type>STRING</type>
+              </com.ibm.tatzia.kg.query.ConstantVal>
+              <com.ibm.tatzia.kg.query.ConstantVal>
+                <__value>&apos;INTERNATIONAL BUSINESS MACHINES CORP&apos;</__value>
+                <type>STRING</type>
+              </com.ibm.tatzia.kg.query.ConstantVal>
+            </__elements>
+          </rightExpr>
+        </com.ibm.tatzia.kg.query.CompExpr>
+        <com.ibm.tatzia.kg.query.CompExpr>
+          <leftExpr class="com.ibm.tatzia.kg.query.OQLIdentifier">
+            <aliasref>
+              <alias reference="../../../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+              <name>oPublicMetricData</name>
+            </aliasref>
+            <property>
+              <aliasref reference="../../aliasref"/>
+              <name>metric_year</name>
+            </property>
+          </leftExpr>
+          <op>GreaterThanOrEqual</op>
+          <rightExpr class="com.ibm.tatzia.kg.query.ConstantVal">
+            <__value>&apos;2013&apos;</__value>
+            <type>STRING</type>
+          </rightExpr>
+        </com.ibm.tatzia.kg.query.CompExpr>
+        <com.ibm.tatzia.kg.query.CompExpr>
+          <leftExpr class="com.ibm.tatzia.kg.query.OQLIdentifier">
+            <aliasref>
+              <alias reference="../../../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+              <name>oPublicMetricData</name>
+            </aliasref>
+            <property>
+              <aliasref reference="../../aliasref"/>
+              <name>metric_year</name>
+            </property>
+          </leftExpr>
+          <op>LessThanOrEqual</op>
+          <rightExpr class="com.ibm.tatzia.kg.query.ConstantVal">
+            <__value>&apos;2015&apos;</__value>
+            <type>STRING</type>
+          </rightExpr>
+        </com.ibm.tatzia.kg.query.CompExpr>
+        <com.ibm.tatzia.kg.query.PathExpression>
+          <lObjExpr>
+            <object>
+              <aliasref>
+                <alias reference="../../../../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+                <name>oPublicMetricData</name>
+              </aliasref>
+              <intermediateQuery>false</intermediateQuery>
+            </object>
+            <relations>
+              <string>forMetric</string>
+            </relations>
+          </lObjExpr>
+          <rObjExpr>
+            <object>
+              <aliasref>
+                <alias reference="../../../../../../../../from/fromClause/com.ibm.tatzia.kg.query.FromArgument[2]/alias"/>
+                <name>oPublicMetric</name>
+              </aliasref>
+              <intermediateQuery>false</intermediateQuery>
+            </object>
+            <relations/>
+          </rObjExpr>
+        </com.ibm.tatzia.kg.query.PathExpression>
+        <com.ibm.tatzia.kg.query.PathExpression>
+          <lObjExpr>
+            <object>
+              <aliasref>
+                <alias reference="../../../../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+                <name>oPublicMetricData</name>
+              </aliasref>
+              <intermediateQuery>false</intermediateQuery>
+            </object>
+            <relations>
+              <string>forPublicCompany</string>
+            </relations>
+          </lObjExpr>
+          <rObjExpr>
+            <object>
+              <aliasref>
+                <alias reference="../../../../../../../../from/fromClause/com.ibm.tatzia.kg.query.FromArgument[3]/alias"/>
+                <name>oPublicCompany</name>
+              </aliasref>
+              <intermediateQuery>false</intermediateQuery>
+            </object>
+            <relations/>
+          </rObjExpr>
+        </com.ibm.tatzia.kg.query.PathExpression>
+      </Exprs>
+    </expr>
+  </whereClause>
+  <groupBy>
+    <groupByArguments>
+      <com.ibm.tatzia.kg.query.OQLIdentifier>
+        <aliasref>
+          <alias reference="../../../../../select/selectColumns/com.ibm.tatzia.kg.query.SelectColumn/__value/__params/com.ibm.tatzia.kg.query.OQLIdentifier/aliasref/alias"/>
+          <name>oPublicMetricData</name>
+        </aliasref>
+        <property>
+          <aliasref reference="../../aliasref"/>
+          <name>metric_year</name>
+        </property>
+      </com.ibm.tatzia.kg.query.OQLIdentifier>
+    </groupByArguments>
+  </groupBy>
+  <fetchFirst>0</fetchFirst>
+</com.ibm.tatzia.kg.query.OQLQuery>

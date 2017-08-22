@@ -1,0 +1,66 @@
+ {
+ 	"catalogVersion": "1.0",
+ 	"functions": [{
+ 			"name": "avg",
+ 			"parameterOptions": [{
+ 					"input": ["integer"],
+ 					"output": "integer"
+ 				},
+ 				{
+ 					"input": ["double"],
+ 					"output": "double"
+ 				},
+ 				{
+ 					"input": ["long"],
+ 					"output": "long"
+ 				}
+ 			],
+ 			"details": "This function takes as an argument any numeric data type or any nonnumeric data type that can be implicitly converted to a numeric data type. The function returns the same data type as the numeric data type of the argument."
+ 		},
+ 		{
+ 			"name": "max",
+ 			"parameterOptions": [{
+ 					"input": ["integer"],
+ 					"output": "integer"
+ 				},
+ 				{
+ 					"input": ["double"],
+ 					"output": "double"
+ 				},
+ 				{
+ 					"input": ["long"],
+ 					"output": "long"
+ 				}
+ 			],
+ 			"details": "This function takes as an argument any numeric data type or any nonnumeric data type that can be implicitly converted to a numeric data type. The function returns the same data type as the numeric data type of the argument."
+ 		}, {
+ 			"name": "term",
+ 			"parameterOptions": [{
+ 					"input": ["string", "integer"],
+ 					"output": "JSONArray"
+ 				},
+ 				{
+ 					"input": ["string"],
+ 					"output": "JSONArray"
+ 				}
+ 			],
+ 			"details": "This function takes as an argument a string which is a property name and an integer which is the number of most frequently occuring values in that proprty to display.  "
+ 		}, {
+ 			"name": "histogram",
+ 			"parameterOptions": [{
+ 				"input": ["string", "integer"],
+ 				"output": "JSONArray"
+ 			}],
+ 			"details": "This function takes as an argument a string which is a property name and an integer which is the interval value to be used to bucketize the values taken by the property"
+ 		},
+ 		{
+ 			"name": "timeslice",
+ 			"parameterOptions": [{
+ 				"input": ["string", "string"],
+ 				"output": "JSONArray"
+ 			}],
+ 			"details": "This function takes as an argument a string which is a date type property name and a string which is the interval time to be used to bucketize the values taken by the property"
+ 		}
+
+ 	]
+ }
